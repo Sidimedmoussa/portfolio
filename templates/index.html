@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Sidi Med</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="static/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a href="#">SidiMedPORTFOLIO</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="#">Home</a></li>
+								<li><a href="#skils">Skils</a></li>
+								<li><a href="#projects">Projects</a></li>
+								<li><a href="#contacts">Contacts</a></li>
+							</ul>
+						
+						</div>
+					</nav>
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<div class="logo"><span class="icon fa-gem"></span></div>
+							<h2>SIDI MOHAMED MOUSSA</h2>
+							<p> Backend Developper</p>
+						</div>
+					</section>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+
+						<!-- One -->
+							<section  id="skils" class="wrapper spotlight style1">
+								<div class="inner">
+									<div class="content">
+										<h2 class="major">Skils</h2>
+
+										<div>
+											{% for skil_data in skils_data %}
+												<div class = "skil">{{skil_data[1]}}<span class ="skpls">+</span></div>
+											{% endfor %}
+										</div>
+										
+									</div>
+								</div>
+							</section>
+
+
+						<!-- Four -->
+							<section id="projects" class="wrapper alt style1">
+								<div class="inner">
+									<h2 class="major">Projects</h2>
+									<section class="features">
+										
+										{% for project_data in projects_data %}
+											<article>
+												<h3 class="major">{{ project_data[1] }}</h3>
+												<p>{{ project_data[2] }}</p>
+												<a href="{{ project_data[3] }}" class="special">Link</a>
+											</article>
+										{% endfor %}
+									</section>
+									
+								</div>
+							</section>
+
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner" id="contacts">
+							<h2 class="major">Contact me</h2>
+
+							<form action="/contact_form" method="post">
+								<div class="fields">
+									<div class="field">
+										<label>Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label >Email</label>
+										<input type="email" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label >Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+
+							<ul class="contact">
+								<li class="icon solid fa-phone">(+222) 41747047</li>
+								<li class="icon solid fa-envelope"><a href="sidimedm76@gmail.com">sidimedm76@gmail.com</a></li>
+								</ul>
+							<ul class="copyright">
+								<li>08/2022</li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/assets/js/jquery.min.js"></script>
+			<script src="static/assets/js/jquery.scrollex.min.js"></script>
+			<script src="static/assets/js/browser.min.js"></script>
+			<script src="static/assets/js/breakpoints.min.js"></script>
+			<script src="static/assets/js/util.js"></script>
+			<script src="static/assets/js/main.js"></script>
+
+	</body>
+</html>
